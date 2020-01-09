@@ -4,6 +4,9 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import LinkIcon from '@material-ui/icons/Link';
 
 export default class Repos extends Component {
 
@@ -30,15 +33,33 @@ export default class Repos extends Component {
     }
 
     makeCard(repoInfo) {
-        return <h1> {repoInfo.name} </h1>
+        return (
+            <div className="Card">
+            <Card variant="outlined">  
+                <CardContent  width="15%">
+                    <Typography className="Card-title" gutterBottom>
+                        {repoInfo.name}
+                    </Typography>
+                    <Typography className="Card-body" gutterBottom>
+                        {repoInfo.description}
+                    </Typography>
+                </CardContent>
+                <CardActions disableSpacing className="linkButton">
+                    <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
+                        <LinkIcon className="linkText"/>
+                        <p className="linkText"> View on GitHub </p>
+                    </IconButton>
+                </CardActions>
+            </Card>
+            </div>
+        );
     }
 
     render() {
         let cards = this.state.repos.map(o => this.makeCard(o));
-        console.log(cards);
         return (
             <div align='center'>
-                <h1> Repos </h1>
+                <h1 className="big"> Repos </h1>
                 {cards}
             </div>
         );

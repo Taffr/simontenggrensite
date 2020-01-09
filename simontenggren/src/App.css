@@ -8,3 +8,30 @@
     margin-left:50px;
 }
 
+.Card {
+    width: 50vw;
+    margin-bottom: 20px;
+}
+
+.Card-title {
+    color: #000000;
+    font-size: 25pt;
+}
+
+.Card-body {
+    color: #808080;
+}
+
+.big {
+    font-size: 50pt;
+}
+.linkText {
+    font-size: 12pt;
+    color: #0066ff;
+}
+
+.linkButton {
+    float: left;
+    position: relative;
+    left: 38.75%;
+}

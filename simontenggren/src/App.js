@@ -7,6 +7,7 @@ import './App.css';
 import theme from './theme.js';
 import About from './about.js';
 import Repos from './repos.js';
+import Media from './media.js';
 
 function App() {
   const repos = () => <Repos/>;
@@ -41,6 +42,9 @@ function App() {
                 </Route>
                 <Route exact path="/about">
                     <About/>
+                </Route>
+                <Route exact path="/media">
+                    <Media/>
                 </Route>
             </Switch>
         </div>

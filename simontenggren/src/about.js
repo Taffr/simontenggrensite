@@ -21,7 +21,7 @@ export default class About extends Component {
                     <Router>
                     <h1> TL;DR: Download my CV <Link to="/public/simontenggrenCV.pdf" target="_blank" download> here </Link></h1>
                     </Router>
-                    <h1> About </h1>
+                    <h1 className="big"> About </h1>
                 </div>
                 <div align="center">
                     <ReactMarkdown source={this.state.md} />
