@@ -13,7 +13,6 @@ function App() {
   const repos = () => <Repos/>;
   const about  = () => <About/>;
   return (
-
       <Router>
       <div>
             <AppBar style={theme} position="static">

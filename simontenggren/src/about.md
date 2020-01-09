@@ -1,2 +1,1 @@
-
-TL;DR: Download my CV [here](TODO)
+Jag heter Simon!
