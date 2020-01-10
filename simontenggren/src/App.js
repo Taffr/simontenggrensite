@@ -7,11 +7,9 @@ import './App.css';
 import theme from './theme.js';
 import About from './about.js';
 import Repos from './repos.js';
-import Media from './media.js';
+import Guestbook from './guestbook.js';
 
 function App() {
-  const repos = () => <Repos/>;
-  const about  = () => <About/>;
   return (
       <Router>
       <div>
@@ -26,9 +24,6 @@ function App() {
                     <Link to="/repos" className="App-hitem"> 
                         <Button variant="outlined"> Repos </Button>
                     </Link>
-                    <Link to="/media" className="App-hitem"> 
-                        <Button variant="outlined">Media</Button>
-                    </Link>
                     <Link to="/guestbook" className="App-hitem"> 
                         <Button variant="outlined">Say hi!</Button>
                     </Link>
@@ -42,10 +37,10 @@ function App() {
                 <Route exact path="/about">
                     <About/>
                 </Route>
-                <Route exact path="/media">
-                    <Media/>
+                <Route exact path="/guestbook">
+                    <Guestbook/>
                 </Route>
-            </Switch>
+           </Switch>
         </div>
       </div>
       </Router>

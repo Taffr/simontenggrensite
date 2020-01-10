@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -33,6 +32,11 @@ export default class Repos extends Component {
     }
 
     makeCard(repoInfo) {
+        let age = this.getAgeColor(repoInfo.pushed_at);
+        let language = "";
+        if (repoInfo.language){
+            language = <Typography className="language"> Main language: {repoInfo.language} </Typography>;
+        }
         return (
             <div className="Card">
             <Card variant="outlined">  
@@ -43,23 +47,43 @@ export default class Repos extends Component {
                     <Typography className="Card-body" gutterBottom>
                         {repoInfo.description}
                     </Typography>
+                    {language}
+                    <Typography className={age}>
+                        Last update: {repoInfo.pushed_at.split("T")[0]} 
+                    </Typography>
                 </CardContent>
-                <CardActions disableSpacing className="linkButton">
+                <CardActions className="linkButton">
                     <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
                         <LinkIcon className="linkText"/>
                         <p className="linkText"> View on GitHub </p>
                     </IconButton>
+                
                 </CardActions>
+                
             </Card>
             </div>
-        );
+        ); 
+    }
+
+    getAgeColor(updateString) {
+        const today = new Date();
+        const updated = Date.parse(updateString);
+        const diffDays = Math.ceil(Math.abs(updated - today) / (1000 * 60 * 60 * 24));
+        if (diffDays >= 365){
+            return "old";
+        } else if(diffDays >= 182){
+            return "mid";
+        }else{
+            return "new";
+        }
+                    
     }
 
     render() {
         let cards = this.state.repos.map(o => this.makeCard(o));
         return (
             <div align='center'>
-                <h1 className="big"> Repos </h1>
+                <h1 className="big"> REPOS </h1>
                 {cards}
             </div>
         );

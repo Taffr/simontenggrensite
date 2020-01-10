@@ -16,6 +16,7 @@
 .Card-title {
     color: #000000;
     font-size: 25pt;
+    font-weight: bold;
 }
 
 .Card-body {
@@ -28,6 +29,35 @@
 .linkText {
     font-size: 12pt;
     color: #0066ff;
+}
+
+.new {
+    font-size: 6pt;
+    color: #00cc00;
+    align:right;
+    margin-top: 10pt;
+    margin-bottom: 0;
+}
+
+.mid {
+    font-size: 6pt;
+    color: #ff9900;
+    align:right;
+    margin-top: 10pt;
+    margin-bottom: 0;
+}
+
+.old {
+    font-size: 6pt;
+    color: #ff3300;
+    align:right;
+    margin-top: 10pt;
+    margin-bottom: 0;
+}
+
+.language {
+    font-size: 8pt;
+    color: #808080;
 }
 
 .linkButton {
