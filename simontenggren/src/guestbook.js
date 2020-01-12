@@ -1,18 +1,32 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-export default class Repos extends Component {
+export default class Guestbook extends Component {
 
     constructor(props) {
-        const url = 'http://localhost:8080';
         super(props);
-        axios.get(url + '/posts').then(r => console.log(r));
-        axios({
-            method: "POST",
-            url: url + '/posts',
-            data: {
-                test: "Hello there!",
-                another: "General Kenobi!"
-            }
+        this.state = {posts: []};
+        let body = {
+            poster : "Simon Tenggren",
+            title : "TestTitle",
+            body  : "Some body of the post",
+            email : "simon.tenggren@gmail.com"
+        };
+        //axios.post(url + '/posts', body);
+    }
+
+    async UNSAFE_componentWillMount(){
+        const url = 'http://localhost:8080';
+        let posts = [];
+        await axios.get(url + '/posts').then(r => posts = r.data);
+        await this.promisedSetState(posts);
+        console.log(this.state);
+    }
+    
+    promisedSetState(toBeSet) {
+        return new Promise((resolve) => {
+            this.setState({posts: toBeSet}, () => {
+                resolve();
+            });
         });
     }
 

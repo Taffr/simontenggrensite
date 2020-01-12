@@ -41,7 +41,38 @@ app.get('/posts', async (req, res) => {
 });
 
 app.post('/posts', async (req, res) => {
-    console.log(req.body);
+
+    let poster = req.body.poster;
+    let title = req.body.title;
+    let body = req.body.body;
+    let email = req.body.email;
+    console.log(poster + " " + title + " " + body+ " " +  email);
+    if (!poster || !title || !body || !email){
+        res.status(402);
+        res.send("Missing param(s)");
+        return;
+    }
+
+    // TODO: Check valid email
+    let sqlPoster= "INSERT INTO Posters (posterName, posterEmail) VALUES (?, ?);";
+    await con.query(sqlPoster, [poster, email],  (err, result) => {
+        if (err) {
+            res.status(402);
+            res.send();
+        };
+    });
+
+    let sqlPost = "INSERT INTO Posts (posterEmail, title, body) VALUES (?, ?, ?);";
+    await con.query(sqlPost, [email, title, body], (err, result) => {
+        if(err){
+            res.status(402);
+            res.send();
+        } 
+    });
+
+    res.status(200);
+    res.send();
+
 });
 
 
