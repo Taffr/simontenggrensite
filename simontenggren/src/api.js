@@ -41,7 +41,7 @@ app.get('/posts', async (req, res) => {
 });
 
 app.post('/posts', async (req, res) => {
-
+    // TODO: Add date in schemas
     let poster = req.body.poster;
     let title = req.body.title;
     let body = req.body.body;
