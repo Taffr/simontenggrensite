@@ -7,14 +7,15 @@ import './App.css';
 import theme from './theme.js';
 import About from './about.js';
 import Repos from './repos.js';
-import Guestbook from './guestbook.js';
+import Home from './home.js';
+
 
 function App() {
   return (
       <Router>
       <div>
             <AppBar style={theme} position="static">
-                <Toolbar variant="dense">
+                <Toolbar>
                     <Link to="/" className="App-hitem">
                         <h1 className="App-hitem" align="left" margin="10px"> simontenggren.xyz </h1>
                     </Link>
@@ -23,9 +24,6 @@ function App() {
                     </Link>
                     <Link to="/repos" className="App-hitem"> 
                         <Button variant="outlined"> Repos </Button>
-                    </Link>
-                    <Link to="/guestbook" className="App-hitem"> 
-                        <Button variant="outlined">Say hi!</Button>
                     </Link>
                 </Toolbar>
             </AppBar>
@@ -37,8 +35,8 @@ function App() {
                 <Route exact path="/about">
                     <About/>
                 </Route>
-                <Route exact path="/guestbook">
-                    <Guestbook/>
+                <Route path="/">
+                    <Home/>
                 </Route>
            </Switch>
         </div>

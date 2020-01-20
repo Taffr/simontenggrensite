@@ -6,11 +6,21 @@
     color: #000000;
     text-decoration: none;
     margin-left:50px;
+    font-size: 30pt;
+}
+
+.barButton {
+    color: #000000;
+    margin-left:20px;
+    height: 20wv;
+    width: 20wv;
+    font-size: 40pt;
+    text-align: center;
 }
 
 .Card {
     width: 50vw;
-    margin-bottom: 20px;
+    margin: 1vw;
 }
 
 .Card-title {
@@ -25,10 +35,13 @@
 
 .big {
     font-size: 50pt;
+    align: center;
 }
+
 .linkText {
     font-size: 12pt;
     color: #0066ff;
+    text-decoration: none;
 }
 
 .new {
@@ -66,6 +79,10 @@
     left: 38.75%;
 }
 
+.linkIcon {
+    text-align: center;
+}
+
 .formFields {
     float: left;
     position: relative;
@@ -85,4 +102,26 @@
 .butSub {
     width: 200px;
     height: 50px;
+}
+
+.grid2x2 {
+    position: relative;
+    float: left;
+    left: 13%;
+    margin-top: 8vw;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.linkCard {
+    width: 35vw;
+    margin: 1vw;
+}
+
+.linkCard-text{
+    text-decoration: none;
+    font-size: 20pt;
+    text-align: center;
 }
