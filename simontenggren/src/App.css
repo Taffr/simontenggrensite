@@ -20,7 +20,9 @@
 
 .Card {
     width: 50vw;
+    align-items: center;
     margin: 1vw;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .Card-title {
@@ -33,19 +35,24 @@
     color: #808080;
 }
 
+.cardActions {
+    text-align: center;
+    margin-left: 21vw;
+}
+
 .big {
     font-size: 50pt;
     align: center;
 }
 
 .linkText {
-    font-size: 12pt;
+    font-size: 15pt;
     color: #0066ff;
     text-decoration: none;
 }
 
 .new {
-    font-size: 6pt;
+    font-size: 12pt;
     color: #00cc00;
     align:right;
     margin-top: 10pt;
@@ -74,13 +81,13 @@
 }
 
 .linkButton {
-    float: left;
-    position: relative;
-    left: 38.75%;
+    text-align: center;
 }
 
 .linkIcon {
     text-align: center;
+    margin-top: 10pt;
+    margin-bottom: -14pt;
 }
 
 .formFields {
@@ -118,10 +125,44 @@
 .linkCard {
     width: 35vw;
     margin: 1vw;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .linkCard-text{
     text-decoration: none;
     font-size: 20pt;
     text-align: center;
+    margin-bottom: 10pt;
 }
+.links {
+    text-decoration: none;
+}
+
+.aboutImages {
+    height: 20vw;
+    margin: 60pt;
+}
+
+.aboutImg {
+    height: 30vw;
+    margin-bottom: 20pt;
+    margin-left: 15pt;
+    max-width: 50%;
+    max-height: 35vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mdText {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 13vw;
+    font-size:20pt;
+    min-width: 75%;
+}
+
+.textBox {
+    margin: 50pt;
+    padding: 50pt;
+    padding-top: 20pt;
+}
+

@@ -52,14 +52,14 @@ export default class Repos extends Component {
                         Last update: {repoInfo.pushed_at.split("T")[0]} 
                     </Typography>
                 </CardContent>
-                <CardActions className="linkButton">
-                    <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
-                        <LinkIcon className="linkText"/>
-                        <p className="linkText"> View on GitHub </p>
-                    </IconButton>
-                
-                </CardActions>
-                
+                <div className="cardActions">
+                    <CardActions>
+                            <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
+                                <LinkIcon className="linkText"/>
+                                <p className="linkText"> View on GitHub </p>
+                        </IconButton>
+                    </CardActions>
+                </div>
             </Card>
             </div>
         ); 

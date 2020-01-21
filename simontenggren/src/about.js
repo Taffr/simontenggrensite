@@ -10,7 +10,6 @@ export default class About extends Component {
     }
 
     async componentWillMount() {
-       console.log("running");
        await fetch(aboutMd).then(r => r.text()).then(text => this.setState({md: text}));
     }
 
@@ -19,12 +18,22 @@ export default class About extends Component {
             <div>
                 <div align="center">
                     <Router>
-                    <h1> TL;DR: Download my CV <Link to="/public/simontenggrenCV.pdf" target="_blank" download> here </Link></h1>
+                    <h1> TL;DR: Download my CV <Link to={process.env.PUBLIC_URL + "/simontenggren-CV.pdf"} target="_blank" download> here </Link></h1>
                     </Router>
                     <h1 className="big"> ABOUT </h1>
                 </div>
                 <div align="center">
-                    <ReactMarkdown source={this.state.md} />
+                    <div className="aboutImages">
+                        <img className="aboutImg" src="./Images/trygga.jpg"/>
+                        <img className="aboutImg" src="./Images/prague.jpeg"/>
+                    </div>
+                    <div className="mdText">
+                        <ReactMarkdown
+                            className="textBox"
+                            source={this.state.md}
+                            escapeHtml={false}
+                        />
+                    </div>
                 </div>
             </div>
         );

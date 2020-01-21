@@ -9,7 +9,6 @@ import About from './about.js';
 import Repos from './repos.js';
 import Home from './home.js';
 
-
 function App() {
   return (
       <Router>

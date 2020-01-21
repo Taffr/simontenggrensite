@@ -17,14 +17,16 @@ export default class Home extends Component {
     makeLinkCard(text, link) {
         return (
             <div className="linkCard">
-                <a href={link} className="linkCard-text" target="_blank">
+                <a href={link} className="links" target="_blank">
                     <Card variant="outlined">  
                         <CardContent className="linkIcon">
                             <SocialIcon url={link}/>
                         </CardContent>
-                        <CardContent>
-                            {text}
-                        </CardContent>
+                        <div className="linkCard-text">
+                            <CardContent >
+                                {text}
+                            </CardContent>
+                        </div>
                     </Card>
                 </a>
             </div>
