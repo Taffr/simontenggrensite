@@ -1,23 +1,13 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import LinkIcon from '@material-ui/icons/Link';
 import {SocialIcon} from 'react-social-icons'; 
 
 export default class Home extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     makeLinkCard(text, link) {
         return (
             <div className="linkCard">
-                <a href={link} className="links" target="_blank">
+                <a href={link} className="links" target="_blank" rel="noopener noreferrer">
                     <Card variant="outlined">  
                         <CardContent className="linkIcon">
                             <SocialIcon url={link}/>

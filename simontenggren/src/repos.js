@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -39,9 +38,10 @@ export default class Repos extends Component {
         }
         return (
             <div className="Card">
+            <a className="noDecor" href={repoInfo.html_url}>
             <Card variant="outlined">  
-                <CardContent  width="15%">
-                    <Typography className="Card-title" gutterBottom>
+                <CardContent width="15%">
+                    <Typography className="cardTitle" gutterBottom>
                         {repoInfo.name}
                     </Typography>
                     <Typography className="Card-body" gutterBottom>
@@ -51,16 +51,13 @@ export default class Repos extends Component {
                     <Typography className={age}>
                         Last update: {repoInfo.pushed_at.split("T")[0]} 
                     </Typography>
+                    <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
+                        <LinkIcon className="linkText"/>
+                            <p className="linkText"> &nbsp; GitHub</p>
+                    </IconButton>
                 </CardContent>
-                <div className="cardActions">
-                    <CardActions>
-                            <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
-                                <LinkIcon className="linkText"/>
-                                <p className="linkText"> View on GitHub </p>
-                        </IconButton>
-                    </CardActions>
-                </div>
             </Card>
+            </a>
             </div>
         ); 
     }

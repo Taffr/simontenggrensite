@@ -24,8 +24,8 @@ export default class About extends Component {
                 </div>
                 <div align="center">
                     <div className="aboutImages">
-                        <img className="aboutImg" src="./Images/trygga.jpg"/>
-                        <img className="aboutImg" src="./Images/prague.jpeg"/>
+                        <img className="aboutImg" src="./Images/trygga.jpg" alt="Me lifting an axle in a strongman competition"/>
+                        <img className="aboutImg" src="./Images/prague.jpeg" alt="Me in Prague"/>
                     </div>
                     <div className="mdText">
                         <ReactMarkdown

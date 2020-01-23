@@ -17,6 +17,7 @@ List are ordered by experience.
 | Java || Node || Vim || Arch based |
 | JavaScript || React || git || Debian based | 
 | SQL  || Numpy  || IntelliJ IDE || Microsoft Windows |
+| Python  || || || |
 
 ### Spoken Languages
 | ** Language ** | ** Level ** |
@@ -26,7 +27,7 @@ List are ordered by experience.
 | French | Basic |
 
 # Hobbies
-### Strength training with focus on Powerlifting and sometimes Strongman.
+### Strength training with focus on Powerlifting and Strongman.
 I find that strength training clears my mind and releases stress.
 It also allows me find something to progress in outside of my studies, reading articles and books on strength trainging is something I do weekly and I love how that it allows me to apply this new knowledge to both improve my own and friends training results.
 

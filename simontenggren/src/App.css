@@ -9,6 +9,10 @@
     font-size: 30pt;
 }
 
+.noDecor {
+    text-decoration: none;
+}
+
 .barButton {
     color: #000000;
     margin-left:20px;
@@ -27,8 +31,7 @@
 
 .Card-title {
     color: #000000;
-    font-size: 25pt;
-    font-weight: bold;
+    font-size: 32pt;
 }
 
 .Card-body {
@@ -37,7 +40,7 @@
 
 .cardActions {
     text-align: center;
-    margin-left: 21vw;
+    margin-left: 22vw;
 }
 
 .big {
@@ -76,6 +79,7 @@
 }
 
 .language {
+    margin-top: 8pt;
     font-size: 8pt;
     color: #808080;
 }

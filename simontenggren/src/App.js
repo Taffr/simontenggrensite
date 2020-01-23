@@ -1,7 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar, IconButton, Button} from '@material-ui/core/';
-import {withTheme} from '@material-ui/core/styles/withTheme';
-import MenuIcon from '@material-ui/icons/Menu';
+import {AppBar, Toolbar, Button} from '@material-ui/core/';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import './App.css';
 import theme from './theme.js';
