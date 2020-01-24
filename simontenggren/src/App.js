@@ -14,7 +14,7 @@ function App() {
             <AppBar style={theme} position="static">
                 <Toolbar>
                     <Link to="/" className="App-hitem">
-                        <h1 className="App-hitem" align="left" margin="10px"> simontenggren.xyz </h1>
+                        <h1 className="App-hitem" align="left" margin="10px"> simontenggren </h1>
                     </Link>
                     <Link to="/about" className="App-hitem"> 
                         <Button variant="outlined"> About me </Button>

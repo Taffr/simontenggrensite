@@ -24,7 +24,7 @@ export default class Home extends Component {
     }
 
     render() {
-        let cards = [['LinkedIn', 'https://linkedin.com/in/simon-tenggren-b30b01143/'], ['GitHub', 'https://github.com/Taff3r'], ['YouTube', 'http://youtube.com'], ['Instagram', 'https://www.instagram.com/simontenggren/']].map(a => this.makeLinkCard(a[0], a[1]));
+        let cards = [['LinkedIn', 'https://linkedin.com/in/simon-tenggren-b30b01143/'], ['GitHub', 'https://github.com/Taff3r'], ['YouTube', 'http://youtube.com/user/xNinjaViking'], ['Instagram', 'https://www.instagram.com/simontenggren/']].map(a => this.makeLinkCard(a[0], a[1]));
         return (
             <div>
                 <div className='grid2x2'>

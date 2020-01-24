@@ -38,7 +38,7 @@ export default class Repos extends Component {
         }
         return (
             <div className="Card">
-            <a className="noDecor" href={repoInfo.html_url}>
+            <a className="noDecor" href={repoInfo.html_url} target="_blank" rel="noopener noreferrer">
             <Card variant="outlined">  
                 <CardContent width="15%">
                     <Typography className="cardTitle" gutterBottom>
