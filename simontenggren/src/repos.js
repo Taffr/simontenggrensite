@@ -17,10 +17,21 @@ export default class Repos extends Component {
         await this.fetchData();
     }
 
+
+    sortRepos(repos) {
+        console.log(repos);
+        let sorted = repos.sort((a,b) => {
+            return new Date(b.pushed_at) - new Date(a.pushed_at);
+        });
+        return sorted;
+    }
+
     async fetchData(){
         let resp = await axios.get('http://api.github.com/users/Taff3r/repos');
-        await this.promisedSetState(resp.data);
+        resp = this.sortRepos(resp.data);
+        await this.promisedSetState(resp);
     }
+
 
     promisedSetState(toBeSet){
         return new Promise((resolve) => {
@@ -53,7 +64,7 @@ export default class Repos extends Component {
                     </Typography>
                     <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
                         <LinkIcon className="linkText"/>
-                            <p className="linkText"> &nbsp; GitHub</p>
+                            <p className="linkText"> &nbsp; View on GitHub</p>
                     </IconButton>
                 </CardContent>
             </Card>
