@@ -1,6 +1,7 @@
 import React from 'react';
 import {AppBar, Toolbar, Button} from '@material-ui/core/';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 import './App.css';
 import theme from './theme.js';
 import About from './about.js';
@@ -17,10 +18,18 @@ function App() {
                         <h1 className="App-hitem" align="left" margin="10px"> simontenggren </h1>
                     </Link>
                     <Link to="/about" className="App-hitem"> 
-                        <Button variant="outlined"> About me </Button>
+                        <Button variant="outlined"> 
+                            <Typography>
+                                About me 
+                            </Typography>   
+                        </Button>
                     </Link>
                     <Link to="/repos" className="App-hitem"> 
-                        <Button variant="outlined"> Repos </Button>
+                        <Button variant="outlined"> 
+                            <Typography>
+                                Repos 
+                            </Typography>
+                        </Button>
                     </Link>
                 </Toolbar>
             </AppBar>
