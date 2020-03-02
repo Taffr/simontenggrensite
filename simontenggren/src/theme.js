@@ -1,5 +1,5 @@
 
 export default {
     background: "#FFFFFF",
-    textColor: "#000000"
+    textColor: "#000000",
 };

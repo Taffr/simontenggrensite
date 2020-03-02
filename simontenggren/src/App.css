@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.barMargin {
+    margin-top: 10%;
+}
 
 .App-hitem {
     color: #000000;

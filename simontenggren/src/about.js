@@ -15,12 +15,11 @@ export default class About extends Component {
 
     render() {
         return (
-            <div>
-                <div align="center">
+            <div className="barMargin">
+                <div align="center" >
                     <Router>
                     <h1> TL;DR: Download my CV <Link to={process.env.PUBLIC_URL + "/simontenggren-CV.pdf"} target="_blank" download> here </Link></h1>
                     </Router>
-                    <h1 className="big"> ABOUT </h1>
                 </div>
                 <div align="center">
                     <div className="aboutImages">

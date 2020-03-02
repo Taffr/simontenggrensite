@@ -11,9 +11,9 @@ import Home from './home.js';
 function App() {
   return (
       <Router>
-      <div>
-            <AppBar style={theme} position="static">
-                <Toolbar>
+      <div className="barMargin">
+            <AppBar style={theme} >
+                <Toolbar >
                     <Link to="/" className="App-hitem">
                         <h1 className="App-hitem" align="left" margin="10px"> simontenggren </h1>
                     </Link>

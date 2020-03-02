@@ -90,8 +90,7 @@ export default class Repos extends Component {
     render() {
         let cards = this.state.repos.map(o => this.makeCard(o));
         return (
-            <div align='center'>
-                <h1 className="big"> REPOS </h1>
+            <div align='center' className="barMargin">
                 {cards}
             </div>
         );
