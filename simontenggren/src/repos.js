@@ -19,7 +19,7 @@ export default class Repos extends Component {
     }
 
     async fetchData(){
-        let resp = await axios.get('http://api.github.com/users/Taff3r/repos');
+        let resp = await axios.get('https://api.github.com/users/Taff3r/repos');
         await this.promisedSetState(resp.data);
     }
 
