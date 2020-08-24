@@ -28,6 +28,7 @@
 .Card {
     width: 50vw;
     align-items: center;
+    align-content:center;
     margin: 1vw;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }
@@ -55,7 +56,6 @@
     font-size: 15pt;
     color: #0066ff;
     text-decoration: none;
-    text-align:center;
 }
 
 .new {
@@ -89,7 +89,8 @@
 }
 
 .linkButton {
-    text-align: center;
+    text-align: right;
+    content-align:right;
 }
 
 .linkIcon {
@@ -121,9 +122,9 @@
 
 .grid2x2 {
     position: relative;
-    float: left;
-    left: 13%;
-    margin-top: 8vw;
+    float: center;
+    margin-top: 14vw;
+    margin-left: 11vw; 
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;

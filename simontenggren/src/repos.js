@@ -19,7 +19,7 @@ export default class Repos extends Component {
     }
 
     async fetchData(){
-        let resp = await axios.get('https://api.github.com/users/Taff3r/repos');
+        let resp = await axios.get('http://api.github.com/users/Taff3r/repos');
         await this.promisedSetState(resp.data);
     }
 
@@ -39,6 +39,7 @@ export default class Repos extends Component {
         }
         return (
             <div className="Card">
+            <a href={repoInfo.html_url} className="links" target="_blank" rel="noopener noreferrer">
             <Card variant="outlined">  
                 <CardContent  width="15%">
                     <Typography className="Card-title" gutterBottom>
@@ -52,17 +53,13 @@ export default class Repos extends Component {
                         Last update: {repoInfo.pushed_at.split("T")[0]} 
                     </Typography>
                 </CardContent>
-                <CardActions >
+                <CardActions className="linkButton">
                     <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
-                        <div className="linkButton">
-                            <LinkIcon className="linkText"/>
-                            <p className="linkText"> View on GitHub </p>
-                        </div>
+                        <LinkIcon className="linkText"/>
                     </IconButton>
-                
                 </CardActions>
-                
             </Card>
+            </a>
             </div>
         ); 
     }
@@ -83,13 +80,11 @@ export default class Repos extends Component {
 
     render() {
         let cards = this.state.repos.sort((f,s) => {
-            if (f.pushed_at < s.pushed_at) 
+            if (f.pushed_at < s.pushed_at)
                 return 1;
-            else if (f.pushed_at > s.pushed_at)
+            else if(f.pushed_at > s.pushed_at)
                 return -1;
-            else 
-                return 0;
-
+            return 0;
         }).map(o => this.makeCard(o));
         return (
             <div align='center'>
