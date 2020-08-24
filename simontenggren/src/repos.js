@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -17,21 +18,10 @@ export default class Repos extends Component {
         await this.fetchData();
     }
 
-
-    sortRepos(repos) {
-        console.log(repos);
-        let sorted = repos.sort((a,b) => {
-            return new Date(b.pushed_at) - new Date(a.pushed_at);
-        });
-        return sorted;
-    }
-
     async fetchData(){
-        let resp = await axios.get('http://api.github.com/users/Taff3r/repos');
-        resp = this.sortRepos(resp.data);
-        await this.promisedSetState(resp);
+        let resp = await axios.get('https://api.github.com/users/Taff3r/repos');
+        await this.promisedSetState(resp.data);
     }
-
 
     promisedSetState(toBeSet){
         return new Promise((resolve) => {
@@ -39,7 +29,7 @@ export default class Repos extends Component {
                 resolve();
             });
         });
-    }
+}
 
     makeCard(repoInfo) {
         let age = this.getAgeColor(repoInfo.pushed_at);
@@ -49,10 +39,9 @@ export default class Repos extends Component {
         }
         return (
             <div className="Card">
-            <a className="noDecor" href={repoInfo.html_url} target="_blank" rel="noopener noreferrer">
             <Card variant="outlined">  
-                <CardContent width="15%">
-                    <Typography className="cardTitle" gutterBottom>
+                <CardContent  width="15%">
+                    <Typography className="Card-title" gutterBottom>
                         {repoInfo.name}
                     </Typography>
                     <Typography className="Card-body" gutterBottom>
@@ -62,13 +51,18 @@ export default class Repos extends Component {
                     <Typography className={age}>
                         Last update: {repoInfo.pushed_at.split("T")[0]} 
                     </Typography>
-                    <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
-                        <LinkIcon className="linkText"/>
-                            <p className="linkText"> &nbsp; View on GitHub</p>
-                    </IconButton>
                 </CardContent>
+                <CardActions >
+                    <IconButton className="linkButton" href={repoInfo.html_url} variant="contained">
+                        <div className="linkButton">
+                            <LinkIcon className="linkText"/>
+                            <p className="linkText"> View on GitHub </p>
+                        </div>
+                    </IconButton>
+                
+                </CardActions>
+                
             </Card>
-            </a>
             </div>
         ); 
     }
@@ -88,9 +82,18 @@ export default class Repos extends Component {
     }
 
     render() {
-        let cards = this.state.repos.map(o => this.makeCard(o));
+        let cards = this.state.repos.sort((f,s) => {
+            if (f.pushed_at < s.pushed_at) 
+                return 1;
+            else if (f.pushed_at > s.pushed_at)
+                return -1;
+            else 
+                return 0;
+
+        }).map(o => this.makeCard(o));
         return (
-            <div align='center' className="barMargin">
+            <div align='center'>
+                <h1 className="big"> REPOS </h1>
                 {cards}
             </div>
         );
