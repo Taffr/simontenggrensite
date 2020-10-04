@@ -1,4 +1,4 @@
-## I am a 22 year old Swedish Information and Communications Engineering Student with focus on Software Engineering currently studying my masters at Lunds Tekniska Högskola. 
+## I am a 23 year old Swedish Information and Communications Engineering Student with focus on Software Engineering currently studying my masters at Lunds Tekniska Högskola. 
 
 # Previous Employment
 More information can be found on my [LinkedIn](https://linkedin.com/in/simon-tenggren-b30b01143).
