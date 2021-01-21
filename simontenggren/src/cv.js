@@ -11,8 +11,8 @@ export default class CV extends Component {
     }
 
     async componentWillMount() {
-        await fetch(cvMd).then(r => r.text()).
-            then(text => this.setState({md:text}));
+        await fetch(cvMd).then(r => r.text())
+                .then(text => this.setState({md:text}));
     }
     render() {
         return (

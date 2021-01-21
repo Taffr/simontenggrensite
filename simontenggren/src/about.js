@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactMarkdown from 'react-markdown';
 import aboutMd from './about.md';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
 export default class About extends Component {
 
     constructor(props){
