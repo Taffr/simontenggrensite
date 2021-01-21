@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import './App.css';
 import theme from './theme.js';
 import About from './about.js';
+import CV from './cv.js';
 import Repos from './repos.js';
 import Home from './home.js';
 
@@ -19,14 +20,21 @@ function App() {
                     </Link>
                     <Link to="/about" className="App-hitem"> 
                         <Button variant="outlined"> 
-                            <Typography>
+                            <Typography variant="h7">
                                 About me 
+                            </Typography>   
+                        </Button>
+                    </Link>
+                    <Link to="/cv" className="App-hitem"> 
+                        <Button variant="outlined"> 
+                            <Typography variant="h7">
+                                CV 
                             </Typography>   
                         </Button>
                     </Link>
                     <Link to="/repos" className="App-hitem"> 
                         <Button variant="outlined"> 
-                            <Typography>
+                            <Typography variant="h7">
                                 Repos 
                             </Typography>
                         </Button>
@@ -37,6 +45,9 @@ function App() {
             <Switch>
                 <Route exact path="/repos">
                     <Repos/>
+                </Route>
+                <Route exact path="/cv">
+                    <CV/>
                 </Route>
                 <Route exact path="/about">
                     <About/>
