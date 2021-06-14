@@ -18,7 +18,7 @@ export default class CV extends Component {
         return (
             <div>
                 <div align="center">
-                    <Typography variant="h7">
+                    <Typography variant="h5">
                         <Link to={process.env.PUBLIC_URL + "/simontenggren-CV.pdf"} target="_blank" download>PDF version </Link>
                     </Typography>   
                 </div>
