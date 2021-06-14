@@ -20,21 +20,21 @@ function App() {
                     </Link>
                     <Link to="/about" className="App-hitem"> 
                         <Button variant="outlined"> 
-                            <Typography variant="h7">
+                            <Typography variant="h6">
                                 About me 
                             </Typography>   
                         </Button>
                     </Link>
                     <Link to="/cv" className="App-hitem"> 
                         <Button variant="outlined"> 
-                            <Typography variant="h7">
+                            <Typography variant="h6">
                                 CV 
                             </Typography>   
                         </Button>
                     </Link>
                     <Link to="/repos" className="App-hitem"> 
                         <Button variant="outlined"> 
-                            <Typography variant="h7">
+                            <Typography variant="h6">
                                 Repos 
                             </Typography>
                         </Button>

@@ -15,19 +15,19 @@ export default class About extends Component {
     render() {
         return (
             <div className="barMargin">
-            <div align="center">
-            <div className="aboutImages">
-            <img className="aboutImg" src="./Images/me.jpg" alt="It is I."/>
-            </div>
+                <div align="center">
+                    <div className="aboutImages">
+                        <img className="aboutImg" src="./Images/me.jpg" alt="It is I."/>
+                    </div>
 
-            <div className="mdText">
-            <ReactMarkdown
-            className="textBox"
-            source={this.state.md}
-            escapeHtml={false}
-            />
-            </div>
-            </div>
+                    <div className="mdText">
+                        <ReactMarkdown
+                            className="textBox"
+                            source={this.state.md}
+                            escapeHtml={false}
+                        />
+                    </div>
+                </div>
             </div>
         );
     }

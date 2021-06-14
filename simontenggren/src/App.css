@@ -5,6 +5,9 @@
     margin-top: 10%;
 }
 
+body, html {
+    font-family: monospace 
+}
 .App-hitem {
     color: #000000;
     text-decoration: none;
@@ -49,6 +52,7 @@
 
 .big {
     font-size: 50pt;
+    font-family: monospace;
     align: center;
 }
 
@@ -84,8 +88,9 @@
 
 .language {
     margin-top: 8pt;
-    font-size: 8pt;
+    font-size: 10pt;
     color: #808080;
+    font-family: monospace;
 }
 
 .linkButton {
@@ -123,16 +128,17 @@
 .grid2x2 {
     position: relative;
     float: center;
-    margin-top: 14vw;
-    margin-left: 11vw; 
     min-height: 100%;
     display: flex;
+    margin-top:4vh;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
 .linkCard {
-    width: 35vw;
+    width: 15vw;
     margin: 1vw;
     text-decoration: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -150,12 +156,13 @@
 
 .aboutImages {
     height: 20vw;
-    margin: 2vw;
+    margin: 6vw;
+    margin-bottom: 12vw;
 }
 
 .aboutImg {
     height: 30vw;
-    margin-bottom: 24pt;
+    margin-bottom: 30vw;
     margin-left: 15pt;
     max-width: 50%;
     max-height: 35vw;
@@ -166,6 +173,7 @@
 .mdText {
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 13vw;
+    margin-top:4vw;
     font-size:20pt;
     min-width: 75%;
 }
@@ -174,5 +182,36 @@
     margin: 50pt;
     padding: 50pt;
     padding-top: 20pt;
+}
+
+.wrapper {
+  height: 10vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  margin-top:4vh;
+  justify-content: center;
+}
+
+.type {
+  width: 8ch;
+  animation: typing 2s steps(8), blink .2s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 

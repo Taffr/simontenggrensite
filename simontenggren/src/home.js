@@ -27,6 +27,11 @@ export default class Home extends Component {
         let cards = [['LinkedIn', 'https://linkedin.com/in/simon-tenggren-b30b01143/'], ['GitHub', 'https://github.com/Taff3r'], ['YouTube', 'http://youtube.com/user/xNinjaViking'], ['Instagram', 'https://www.instagram.com/simontenggren/']].map(a => this.makeLinkCard(a[0], a[1]));
         return (
             <div>
+                <div className='wrapper'> 
+                    <div className='type'> 
+                        Welcome!
+                    </div>
+                </div>
                 <div className='grid2x2'>
                     {cards}
                 </div>
