@@ -30,6 +30,7 @@ export default class Home extends Component {
             ['YouTube', 'http://youtube.com/user/xNinjaViking'],
             ['Instagram', 'https://www.instagram.com/simontenggren/']
         ].map(a => this.makeLinkCard(a[0], a[1]));
+
         return (
             <div>
                 <div className='wrapper'> 
