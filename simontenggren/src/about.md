@@ -1,13 +1,12 @@
-## I am a 23 year old Swedish Information and Communications Engineering Student with focus on Software Engineering currently studying my masters at LTH. 
+## I am a Information and Communications Engineering (M.Sc.) graduate with focus on Software Engineering currently residing in Lund, Sweden.
 
 # Software Development 
-My language of choice is at the moment C. I like it because because ever since I took a course in writing efficient C code where I got apprication for the languages simplicity and how line of code is compiled. I also feel that I get to understand more of the compiler and the possible optimizations a good compiler can make, and those it can't. This has made me prefer compiled languages compared to
+My language of choice is at the moment C. I like it because because ever since I took a course in writing efficient C code where I got apprication for the languages simplicity and how each line of code is compiled. I also feel that I get to understand more of the compiler and the possible optimizations a good compiler can make, and those it can't. This has made me prefer compiled languages compared to
 interpreted and managed run-time systems. And later made take a course in compiler technology.
 
 I have also dabbled in machine learning, written several classifiers from scrath and applied neural networks in NLP, image classification, etc. 
 
 I have worked in API development (Node) interacting with several other services, and developed web pages in React and PHP.
-
 
 In my free time I like learning new tools I can use while developing new software, especially new datastructures.
 # Hobbies
