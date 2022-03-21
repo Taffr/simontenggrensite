@@ -1,22 +1,28 @@
 # Simon Tenggren
 ## Education
-5th Year Engineering Student Information and Communication Technologies with Specialization on Software Engineering at LTH 
+M.Sc. Information- and Communication Engineering with specialization in Software Engineering.
 
 Contact: [simon.tenggren@gmail.com](simon.tenggren@gmail.com)  
 Website: [simontenggren.xyz](simontenggren.xyz)  
 GitHub: [Taff3r](https://www.github.com/Taff3r)  
-LinkedIn: [linkedin.com/in/simon-tenggren-b30b01143](linkedin.com/in/simon-tenggren-b30b01143)  
+LinkedIn: [Simon Tenggren](linkedin.com/in/simon-tenggren-b30b01143)  
 Location: Lund, Sweden  
+
 ## Skills 
 ### Programming
-**C**, C++, Java, Python, **SQL**, JS   
+**C**, C++, **C#**, Java, Python, **SQL**, JS
 ### Frameworks and Libraries
-NumPy, NodeJS, React, ExpressJS
+**WebRTC**, NumPy, NodeJS, React, ExpressJS, WPF, .NET.
+
 ### Development Tools
-Oprofile, Valgrind, GDB, git, Android Studio
+Oprofile, Valgrind, GDB, **git**, Android Studio, Gradle, Make
 
 
 ## Previous Employment
++ **Software Developer / Summer Intern, Axis Communications AB, Lund**
+    - Learned how to apply my knowledge to a **new code base**, in an unfamiliar language.
+    - Developed a tool to improve the localization and translation process for increased accessibility for the end customer.
+    - Learned how to work with Agile practices and the value it contributes to the development process.
 + **Student Consultant / Developer, Fortlax Datacenter (now Cloudist Solutions and EcoDataCenter), Malmo, Sweden. ** 
     - First experience working in real life environment, where my code a difference.
     - Had to learn new technologies quickly and adapt to the environment I was in.
@@ -39,7 +45,13 @@ Oprofile, Valgrind, GDB, git, Android Studio
 ## Personal Strengths
 **Disciplined**, **Listening**, **Autonomous**, **Analytic**, **Persistent**
 
-## Personal Projects
+## Projects
+* **Integration and Evaluation of WebRTC in an Existing .NET Environment (M.Sc. Thesis)**
+    + My masters thesis written at LTH and Axis Communications AB.
+    + Integrated and Evaluated WebRTC as an alternative streaming solution in Axis' video management systems.
+    + Learned WebRTC from scratch. 
+    + Download and read [here](http://lup.lub.lu.se/student-papers/record/9076580/file/9076581.pdf).
+
 * **A Specialized B-Tree data structures for Datalog Evaluation in Java**
     + Java implementation of Specialized [B-Tree](https://en.wikipedia.org/wiki/B-tree) for use in Datalog Engines 
     + Specialized Hint-system and synchronization for parallel insertion and searches based on [Seqlocks](https://en.wikipedia.org/wiki/Seqlock).
@@ -57,6 +69,9 @@ Oprofile, Valgrind, GDB, git, Android Studio
     + Easy user customization, change a single file and recompile with GCC with version above C99. 
     + Written entirely in C without any external libraries used.
     + For more information and examples of use see the [repository](https://github.com/Taff3r/GeneralTextPreprocessor) and [presentation (Swedish)](https://www.youtube.com/watch?v=wlMHjejjUIM)
+* **simontenggren.xyz**
+    + Personal Website, you're (most probably) here right now.
+    + Written in React as a SPA.
 
 
 
